@@ -8,6 +8,7 @@ Check the project out into a local folder: [PROJECT_HOME]
 Create a virtual Python environment with Django
 * virtualenv [VDEVS]/vdev-django --no-site-packages
 * source [VDEVS]/vdev-django/bin/activate
+* easy_install django
 
 Configure the project for your local computer:
 * cd [PROJECT_HOME]
