@@ -1,1 +1,24 @@
-Being developed with Python 2.6, Django 1.2.5
+Being developed with Python 2.6.6, Django 1.2.5
+
+RUNNING
+=======
+
+Check the project out into a local folder: [PROJECT_HOME]
+
+Create a virtual Python environment with Django
+* virtualenv [VDEVS]/vdev-django --no-site-packages
+* source [VDEVS]/vdev-django/bin/activate
+
+Configure the project for your local computer:
+* cd [PROJECT_HOME]
+* cp settings_TEMPLATE.py settings.py
+* Modify the "STATIC_DOC_ROOT" value in settings.py to be the absolute
+  filepath fo [PROJECT_HOME]/static-content
+
+python manage.py runserver
+
+Open a browser to http://localhost:8000
+
+JAVASCRIPT TESTS
+================
+http://localhost:8000/static-content/javascript/translette/test/SpecRunner.html
