@@ -1,9 +1,7 @@
 from django.http import HttpResponse
-import datetime
+from django import template
 
-def hello(request):
-    return HttpResponse("Hello world")
-  
-def time(request):
-    return HttpResponse("<html><head><title>Hello!</title></head><body>It is now %s.</body></html>"
-    % datetime.datetime.now())
+def welcome(request):
+    welcome_template = template.loader.get_template('welcome.html')
+    response_html = welcome_template.render(template.Context())
+    return HttpResponse(response_html)

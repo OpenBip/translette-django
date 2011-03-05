@@ -1,14 +1,13 @@
 from django.conf.urls.defaults import patterns
 from django.conf import settings
-from views import hello, time
+from views import welcome
 
 # Uncomment the next two lines to enable the admin:
 # from django.contrib import admin
 # admin.autodiscover()
 
 urlpatterns = patterns('',
-    ('^hello/$', hello),
-    ('^time/$', time),
+    ('^welcome/$', welcome),
     (r'^static-content/(?P<path>.*)$', 'django.views.static.serve',
         {'document_root': settings.STATIC_DOC_ROOT })
 
