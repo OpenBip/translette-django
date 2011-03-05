@@ -99,4 +99,4 @@ INSTALLED_APPS = (
     # 'django.contrib.admindocs',
 )
 
-STATIC_DOC_ROOT = os.path.join(os.path.dirname(__file__), 'static-content').replace('\\','/'),
+STATIC_DOC_ROOT = os.path.join(os.path.dirname(__file__), 'static-content').replace('\\','/')
