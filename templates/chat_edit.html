@@ -1,0 +1,11 @@
+{% include "includes/header.html" %}
+
+<form action="/chat/new/" method="post">
+{% csrf_token %}
+<table>
+{{ chat_form.as_table }}
+</table>
+<input type="submit" value="Save Chat" />
+</form>
+
+{% include "includes/footer.html" %}

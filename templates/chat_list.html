@@ -1,0 +1,21 @@
+{% include "includes/header.html" %}
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  
+  <tbody>
+{% for chat in chats %}
+  <tr class="{% cycle 'row_on' 'row_off' %}">
+    <td>{{ chat.title }}</td>
+    <td>{{ chat.description }}</td>
+  </tr>
+{% endfor %}
+  </tbody>
+</table>
+
+{% include "includes/footer.html" %}

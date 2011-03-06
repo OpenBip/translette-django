@@ -45,9 +45,9 @@
   <div id="bd" style="border-top: 3px solid orange; border-bottom: 3px solid orange;">
     <div class="yui-b">
       <ul>
-        <li><a href="index.jsp">Home</a></li>
-        <li><a href="list_chats.php">List Chats</a></li>
-        <li><a href="create_chat.php">Create Chat</a></li>
+        <li><a href="{% url views.welcome %}">Home</a></li>
+        <li><a href="{% url chat.views.list_all_chats %}">List Chats</a></li>
+        <li><a href="{% url chat.views.edit_chat %}">Create Chat</a></li>
         <li><a href="join_chat.php">Join Chat</a></li>
         <li><a href="update_account.php">Update Account Info</a></li>
         <li><a href="logout.php">Log Out</a></li>
