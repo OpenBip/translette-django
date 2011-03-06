@@ -3,13 +3,23 @@ from django.http import HttpResponse, HttpResponseRedirect
 from chat.models import Chat
 from django import forms
 from django import template
+from django.core import serializers
 
 def list_all_chats(request):
     chats = Chat.objects.all()
-    print "Found %i chats" % chats.count()
+
+    if request.method != 'GET':
+        # TODO raise exception
+        return HttpResponse("Error")
     
-    list_template = template.loader.get_template('chat_list.html')
-    return HttpResponse(list_template.render(template.Context({ 'chats': chats })))
+    format = request.GET.get('format', 'html')
+    if format == 'html':
+        list_template = template.loader.get_template('chat_list.html')
+        return HttpResponse(list_template.render(template.Context({ 'chats': chats })))
+    elif format == 'json':
+        return HttpResponse(serializers.serialize('json', chats, fields=('title', 'description')))
+    elif format == 'xml':
+        return HttpResponse(serializers.serialize('xml', chats, fields=('title', 'description')))
 
 
 class ChatForm(forms.Form):
