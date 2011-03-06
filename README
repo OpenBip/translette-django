@@ -10,7 +10,9 @@ Create a virtual Python environment with Django
 * source [VDEVS]/vdev-django/bin/activate
 * easy_install django
 
-python manage.py runserver
+* python manage.py runserver
+
+* python manage.py syncdb
 
 Open a browser to http://localhost:8000
 
