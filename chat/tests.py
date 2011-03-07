@@ -22,4 +22,3 @@ class JasmineTests(TestCase):
 
     def tearDown(self):
         self.driver.quit()
-        pass
