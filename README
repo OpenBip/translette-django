@@ -19,3 +19,13 @@ Open a browser to http://localhost:8000
 JAVASCRIPT TESTS
 ================
 http://localhost:8000/static-content/javascript/translette/test/SpecRunner.html
+
+SELENIUM TESTS
+==============
+
+In order for the Selenium tests to work, you'll need to install the Python-
+bindings for Selenium.  To install them in your virtualenv:
+
+* svn checkout http://selenium.googlecode.com/svn/trunk/ selenium-read-only
+* cd selenium-read-only
+* sudo ./go py_install

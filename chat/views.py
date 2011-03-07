@@ -6,11 +6,11 @@ from django import template
 from django.core import serializers
 
 def list_all_chats(request):
-    chats = Chat.objects.all()
-
     if request.method != 'GET':
         # TODO raise exception
         return HttpResponse("Error")
+    
+    chats = Chat.objects.all()
     
     format = request.GET.get('format', 'html')
     if format == 'html':
