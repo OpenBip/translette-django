@@ -10,14 +10,19 @@ Create a virtual Python environment with Django
 * source [VDEVS]/vdev-django/bin/activate
 * easy_install django
 
-* python manage.py runserver
-
-* python manage.py syncdb
+Get the development server running:
+* Terminal 1:
+** cd [PROJECT_HOME]
+** python manage.py runserver
+* Terminal 2:
+** python manage.py syncdb
 
 Open a browser to http://localhost:8000
 
 JAVASCRIPT TESTS
 ================
+
+To run the Jasmine JS test-suite manually, open a browser and go to:
 http://localhost:8000/static-content/javascript/translette/test/SpecRunner.html
 
 SELENIUM TESTS
@@ -25,7 +30,10 @@ SELENIUM TESTS
 
 In order for the Selenium tests to work, you'll need to install the Python-
 bindings for Selenium.  To install them in your virtualenv:
-
 * svn checkout http://selenium.googlecode.com/svn/trunk/ selenium-read-only
 * cd selenium-read-only
 * sudo ./go py_install
+
+Running them:
+* cd [PROJECT_HOME]
+* python manage.py test
